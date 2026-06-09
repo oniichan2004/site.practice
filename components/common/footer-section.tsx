@@ -94,16 +94,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
       </div>
 
-<div className="flex flex-row items-center justify-between w-full h-20 bg-foreground border-t border-gray-800 px-50 text-white">
-
-<span>2025 example.com. All rights reserved</span>
-<span> Terms & Conditions  Privacy Notice</span>
-</div>
-
-
+      <div className="flex flex-row items-center justify-between w-full h-20 bg-foreground border-t border-gray-800 px-50 text-white">
+        <span>2025 example.com. All rights reserved</span>
+        <span> Terms & Conditions Privacy Notice</span>
+      </div>
     </div>
   );
 }

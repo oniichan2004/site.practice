@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Gauge, Fuel, Settings, ArrowUpRight, Bookmark } from "lucide-react";
+
 export default function CardCar() {
   return (
-    <div className=" flex flex-row items-center  justify-center gap-6 pt-7">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-7">
       <div className="flex items-center justify-center   ">
         <div className=" relative w-70 h-95   rounded-2xl border ">
           <Image

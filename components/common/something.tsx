@@ -1,7 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import { Play, Check, ArrowUpRight,BadgeDollarSign,BookCheck ,Gem ,Car  } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 export default function Something() {
   return (
     <div className=" flex  flex-col items-center justify-center ">
@@ -71,12 +73,12 @@ export default function Something() {
             </div>
           </div>
 
-          <div className=" h-20 pt-6">
+          <div className=" h-20 pt-6 flex flex-row">
            
-            <Button className="h-20 w-30 bg-blue-600">
+            <button className="h-20 w-30 bg-blue-600 flex flex-row items-center justify-center rounded-xl"  onClick={() => window.scrollTo({top:0,behavior:'smooth'})}  >
               
-              Get Started <ArrowUpRight />{" "}
-            </Button>{" "}
+              Get Started <ArrowUpRight size='15' />{" "}
+            </button>{" "}
           </div>
         </div>
       </div>

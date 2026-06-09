@@ -5,6 +5,7 @@ import Something from "@/components/common/something";
 import PopularMakes from "@/components/common/popular-makes";
 import SellBuy from "@/components/common/sell-buy"
 import Footer from "@/components/common/footer-section"
+import Scroll from "@/components/pages/home/upp-button";
 function MyHome() {
   return (
     <div>
@@ -15,6 +16,7 @@ function MyHome() {
       <PopularMakes />
       <SellBuy/>
       <Footer/>
+       <Scroll/>
     </div>
   );
 }
