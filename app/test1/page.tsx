@@ -1,4 +1,4 @@
-// import CardCar from "@/components/pages/home/card-car";
+import CardCar from "@/components/pages/home/card-car";
 // import Something from "@/components/common/something";
 // import PopularMakes from "@/components/common/popular-makes"
 // import CardCarRight from "@/components/pages/home/card-car-right";
@@ -7,7 +7,12 @@
 import Scroll from "@/components/pages/home/upp-button";
 function Test1() {
   // return <CardCar />;
-  return <Scroll/> ;
+  return (
+    <>
+      <Scroll />
+      {/* <CardCar car={car} /> */}
+    </>
+  );
 }
 
 export default Test1;

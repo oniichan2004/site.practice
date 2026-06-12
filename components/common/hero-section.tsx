@@ -55,10 +55,10 @@ export default function HeroSection() {
                 <Button variant="custom">Submit Listing</Button>
               </div>
             </header>
-            <div className="mt-15 flex flex-col items-center text-center text-white">
-              <p>Find cars for sale and for rent near you</p>
+            <div className=" mt-15 flex flex-col items-center text-center text-white">
+              <p className = " text-sm md:text-lg ">Find cars for sale and for rent near you</p>
 
-              <h1 className="mt-4 text-5xl font-bold">Find Your Perfect Car</h1>
+              <p className="mt-4 text-xl font-bold md:text-4xl  lg:text-6xl">Find Your Perfect Car</p>
 
               <div className="mt-6 flex gap-6 text-sm">
                 <button className="border-b border-white pb-2 cursor-pointer">
