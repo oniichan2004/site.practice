@@ -4,16 +4,16 @@ import Image from "next/image";
 export default function Brands() {
   return (
     <div className="-mt-43">
-      <div className="bg-gray-100 flex flex-row items-center  justify-between pl-40 pr-40  h-32 relative   rounded-t-4xl font-sans ">
+      <div className="bg-muted flex flex-row items-center  justify-between pl-40 pr-40  h-32 relative   rounded-t-4xl font-sans ">
         <p className=" text-3xl pt-15  ">Explore Our Premium Brands</p>
         <Link href="#" className="pt-15 flex items-center pr-13">
           Show All Brands
           <ArrowUpRight size={18} />
         </Link>
       </div>
-      <div className="bg-gray-100 flex h-70 flex-row gap-9  p-4 pl-40 pr-40">
+      <div className="bg-muted flex h-70 flex-row gap-9  p-4 pl-40 pr-40">
         <Link href="#">
-          <div className=" bg-white w-43 h-35 rounded-3xl  flex flex-col items-center   ">
+          <div className=" bg-card w-43 h-35 rounded-3xl  flex flex-col items-center   ">
             <Image
               src="/brand-logo/audi.jpg"
               alt="Audi"
@@ -25,7 +25,7 @@ export default function Brands() {
         </Link>
 
         <Link href="#">
-          <div className=" bg-white w-40 h-35 rounded-3xl  flex flex-col items-center ">
+          <div className=" bg-card w-40 h-35 rounded-3xl  flex flex-col items-center ">
             <Image
               src="/brand-logo/bmw.jpg"
               alt="BMW"
@@ -37,7 +37,7 @@ export default function Brands() {
         </Link>
 
         <Link href="#">
-          <div className=" bg-white w-40 h-35 rounded-3xl flex flex-col items-center">
+          <div className=" bg-card w-40 h-35 rounded-3xl flex flex-col items-center">
             <Image
               src="/brand-logo/mercedes.jpg"
               alt="Mercedes"
@@ -49,7 +49,7 @@ export default function Brands() {
         </Link>
 
         <Link href="#">
-          <div className=" bg-white w-40 h-35 rounded-3xl flex flex-col items-center">
+          <div className=" bg-card w-40 h-35 rounded-3xl flex flex-col items-center">
             <Image
               src="/brand-logo/ford.jpg"
               alt="Ford"
@@ -61,7 +61,7 @@ export default function Brands() {
         </Link>
 
         <Link href="#">
-          <div className=" bg-white w-40 h-35 rounded-3xl flex flex-col items-center">
+          <div className=" bg-card w-40 h-35 rounded-3xl flex flex-col items-center">
             <Image
               src="/brand-logo/peugeot.jpg"
               alt="Peugeot"
@@ -72,7 +72,7 @@ export default function Brands() {
           </div>
         </Link>
         <Link href="#">
-          <div className=" bg-white w-40 h-35 rounded-3xl flex flex-col items-center">
+          <div className=" bg-card w-40 h-35 rounded-3xl flex flex-col items-center">
             <Image
               src="/brand-logo/volkswagen.jpg"
               alt="Volkswagen"

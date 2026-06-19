@@ -5,7 +5,7 @@ import type { cardProps } from "@/app/data.types/car-types";
 
 export default function CardCar({ car }: cardProps) {
   return (
-    <div className="relative w-full max-w-[280px] h-95 rounded-2xl border overflow-hidden ">
+    <div className="relative w-full max-w-[280px] h-95 rounded-2xl border bg-card text-card-foreground overflow-hidden ">
       <div className="relative w-full h-[170px]">
         <Image src={car.img} alt={car.name} fill className="object-cover" />
 
@@ -20,7 +20,7 @@ export default function CardCar({ car }: cardProps) {
             </div>
           )}
 
-          <div className="bg-white rounded-full size-8 flex items-center justify-center">
+          <div className="bg-background rounded-full size-8 flex items-center justify-center">
             <Bookmark size={20} />
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function CardCar({ car }: cardProps) {
       </div>
 
       <div className="pl-5">
-        <div className="border-b border-gray-200 w-60"></div>
+        <div className="border-b border-border w-60"></div>
       </div>
 
       <div className="flex flex-row items-center pl-5 gap-11 pt-2 pb-3">

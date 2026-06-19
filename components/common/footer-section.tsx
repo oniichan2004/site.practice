@@ -3,7 +3,7 @@ import { Apple, Guitar, Landmark, Piano, Play, University } from "lucide-react";
 export default function Footer() {
   return (
     <div className="flex flex-col -mt-20   ">
-      <div className="w-full h-160 bg-foreground  pl-50 pr-50 flex flex-col">
+      <div className="w-full h-160 bg-neutral-900  pl-50 pr-50 flex flex-col">
         <div className="flex flex-row items-center justify-between text-white border-b border-gray-800  pt-25  h-70 ">
           <div className="flex flex-col gap-3">
             <span className="text-3xl  font-sans"> Join CarHut</span>
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-between w-full h-20 bg-foreground border-t border-gray-800 px-50 text-white">
+      <div className="flex flex-row items-center justify-between w-full h-20 bg-neutral-900 border-t border-gray-800 px-50 text-white">
         <span>2025 example.com. All rights reserved</span>
         <span> Terms & Conditions Privacy Notice</span>
       </div>

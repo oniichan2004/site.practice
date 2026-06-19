@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Something() {
   return (
     <div className=" flex  flex-col items-center justify-center ">
-      <div className="flex flex-row items-center bg-blue-100 w-7xl h-140  rounded-2xl ">
+      <div className="flex flex-row items-center bg-blue-100 dark:bg-blue-950 w-7xl h-140  rounded-2xl ">
         <div className="">
           <div className="relative w-160 h-140 flex  items-center justify-center  ">
             <Image
@@ -100,7 +100,7 @@ export default function Something() {
           <span className="text-[12px]"> VERIFIED DEALERS</span>
         </div>
       </div>
-      <div className="border bg-gray-100 w-full h  "> </div>
+      <div className="border bg-muted w-full h  "> </div>
 
 
 

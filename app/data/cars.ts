@@ -40,14 +40,6 @@ export const cars = [
     fuel: "Petrol",
     transmission: "CTV",
     price: "$58,000",
-  },{
-    id: 5,
-    img: '/cars/audi.jpg',
-    name: 'Audi A6 3.5 - 2021',
-    description: "4.0 D5 PowerPulse Momentum 5dr AWD...",
-    mileage: "100 Miles",
-    fuel: "Petrol",
-    transmission: "CTV",
-    price: "$58,000",
   },
+  
 ];

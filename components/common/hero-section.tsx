@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { User ,CarFront } from "lucide-react";
 import Link from "next/link";
 import SearchBar from "@/components/pages/home/search-bar";
+import ThemeToggle from "@/components/common/theme-toggle";
 
 export default function HeroSection() {
   return (
@@ -53,6 +54,7 @@ export default function HeroSection() {
                 </Link>
 
                 <Button variant="custom">Submit Listing</Button>
+                <ThemeToggle />
               </div>
             </header>
             <div className=" mt-15 flex flex-col items-center text-center text-white">

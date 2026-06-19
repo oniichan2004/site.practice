@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArrowUpRight, Car, Van } from "lucide-react";
 export default function SellBuy() {
   return (
-    <div className=" bg-white rounded-b-[70px] relative z-10">
+    <div className=" bg-background rounded-b-[70px] relative z-10">
       <div className="pt-30 pl-50 flex flex-row gap-20 h-150 ">
-        <div className="  pl-20 pt-15 pr-15 w-120 h-80 flex flex-col gap-3  bg-blue-100 rounded-xl">
+        <div className="  pl-20 pt-15 pr-15 w-120 h-80 flex flex-col gap-3  bg-blue-100 dark:bg-blue-950 rounded-xl">
           <div className="text-2xl flex flex-col  font-bold font-sans ">
             <span> Are You Looking</span>
             <span>For a Car ?</span>
@@ -32,7 +32,7 @@ export default function SellBuy() {
           </div>
         </div>
 
-        <div className="  pl-20 pt-15 pr-15 w-120 h-80 flex flex-col gap-3  bg-pink-100 rounded-xl">
+        <div className="  pl-20 pt-15 pr-15 w-120 h-80 flex flex-col gap-3  bg-pink-100 dark:bg-pink-950 rounded-xl">
           <div className="text-2xl flex flex-col  font-bold font-sans ">
             <span>Do You Want to</span>
             <span>Sell a Car ?</span>
@@ -44,7 +44,7 @@ export default function SellBuy() {
             </span>
           </div>
           <div className="flex flex-row items-center  gap-34 text-white  ">
-            <div className="flex flex-row items-center justify-center bg-black w-33 h-15 rounded-xl ">
+            <div className="flex flex-row items-center justify-center bg-neutral-900 dark:bg-neutral-700 w-33 h-15 rounded-xl ">
               <Link
                 href="#"
                 className="flex flex-row items-center justify-center "

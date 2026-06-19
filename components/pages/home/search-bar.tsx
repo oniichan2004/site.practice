@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 export default function SearchBar() {
   return (
-    <div  className="mt-6 flex h-[68px] w-full max-w-[900px] items-center rounded-full bg-white px-4 text-black shadow-lg text-sm md:text-base">
+    <div  className=" dark:bg-black mt-6 flex h-[68px] w-full max-w-[900px] items-center rounded-full bg-white px-4 text-black shadow-lg text-sm md:text-base">
       <Select>
         <SelectTrigger className="h-12 w-[180px] border-0 bg-transparent shadow-none focus:ring-0">
           <SelectValue placeholder="Any Makes" />
