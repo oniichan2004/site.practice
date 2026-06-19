@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import CardCar from "../pages/home/card-car";
-import { cars } from "@/app/data/cars";
+import { cars } from "@/data/cars";
 export default function Exploring() {
   return (
     <div>
@@ -29,7 +29,7 @@ export default function Exploring() {
           <div className="h-[2px] w-14 bg-blue-500"></div>
           <div className="h-[2px] flex-1 bg-border"></div>
         </div>
-        <div className =" pl-40  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-7 justify-items-center">
+        <div className=" pl-40  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-7 justify-items-center">
           {cars.map((car) => (
             <CardCar key={car.id} car={car} />
           ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { cars } from "@/app/data/cars";
+import { cars } from "@/data/cars";
 import CardCar from "./card-car";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -32,7 +32,7 @@ export default function CarCarousel() {
           <ChevronLeft />
         </button>
         <span>
-           {page} / {totalPages}
+          {page} / {totalPages}
         </span>
         <button
           onClick={() => setPage((p) => Math.min(totalPages, p + 1))}

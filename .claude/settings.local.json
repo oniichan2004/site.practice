@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(grep -rln -E \"^trigger:|^---$\" .claude/rules)",
+      "Bash(grep -n -E \"^---$\" .claude/rules/skills/design-engineering.md)",
+      "Bash(rm -rf .claude/skills/sync-rules && echo \"removed sync-rules skill\" && echo \"=== .claude/skills now ===\" && find .claude/skills -type f | sort)",
+      "Bash(awk '/^## Memory/{f=1} f' .claude/rules/core/validation.md)",
+      "Bash(sed -n '/## Memory Integration/,/## Conflict Resolution/p' .claude/rules/core/orchestrator.md)",
+      "mcp__context7__query-docs",
+      "Bash(grep -E \"\\\\.tsx?$\")"
+    ],
+    "deny": [],
+    "additionalDirectories": [
+      "/home/max/dev/dax/front-repo/.claude/skills/sync-rules"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

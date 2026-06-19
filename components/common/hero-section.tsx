@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { User ,CarFront } from "lucide-react";
+import { User, CarFront } from "lucide-react";
 import Link from "next/link";
 import SearchBar from "@/components/pages/home/search-bar";
 import ThemeToggle from "@/components/common/theme-toggle";
+import LanguageToggle from "@/components/common/language-toggle";
+import { useLanguage } from "@/components/common/language-context";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+
   return (
     <div className=" min-h-screen">
       <div className="relative h-[600px] w-full">
@@ -25,53 +31,54 @@ export default function HeroSection() {
               <div className="flex items-center gap-8 text-white  pr-15 ">
                 <Link href="/" className="flex items-center">
                   <select name="" id="">
-                    <option value="home">Home</option>
+                    <option value="home">{t("home")}</option>
                   </select>
                 </Link>
                 <Link href="/" className="flex items-center">
                   <select name=" " id=" ">
-                    <option value="listings">Listings</option>
+                    <option value="listings">{t("listings")}</option>
                   </select>
                 </Link>
                 <Link href="#" className="flex items-center">
                   <select name="" id="">
-                    <option value="blog">Blog</option>
+                    <option value="blog">{t("blog")}</option>
                   </select>
                 </Link>
                 <Link href="#" className="flex items-center">
                   <select name="" id="">
-                    <option value="pages">Pages</option>
+                    <option value="pages">{t("pages")}</option>
                   </select>
                 </Link>
                 <Link href="#" className="flex items-center">
-                  <span>About</span>
+                  <span>{t("about")}</span>
                 </Link>
                 <Link href="#" className="flex items-center">
-                  <span>Contact</span>
+                  <span>{t("contact")}</span>
                 </Link>
                 <Link href="#" className="flex items-center gap-1">
-                  <User size={16} /> <span>Sign in</span>{" "}
+                  <User size={16} /> <span>{t("signIn")}</span>{" "}
                 </Link>
 
-                <Button variant="custom">Submit Listing</Button>
+                <Button variant="custom">{t("submitListing")}</Button>
+                <LanguageToggle />
                 <ThemeToggle />
               </div>
             </header>
             <div className=" mt-15 flex flex-col items-center text-center text-white">
-              <p className = " text-sm md:text-lg ">Find cars for sale and for rent near you</p>
+              <p className=" text-sm md:text-lg ">{t("findCars")}</p>
 
-              <p className="mt-4 text-xl font-bold md:text-4xl  lg:text-6xl">Find Your Perfect Car</p>
+              <p className="mt-4 text-xl font-bold md:text-4xl  lg:text-6xl">{t("perfectCar")}</p>
 
               <div className="mt-6 flex gap-6 text-sm">
                 <button className="border-b border-white pb-2 cursor-pointer">
-                  All
+                  {t("all")}
                 </button>
-                <button className="pb-2 cursor-pointer">New</button>
-                <button className="pb-2 cursor-pointer">Used</button>
+                <button className="pb-2 cursor-pointer">{t("newCar")}</button>
+                <button className="pb-2 cursor-pointer">{t("used")}</button>
               </div>
               <SearchBar />
               <br />
-              <p>Or Browse Featured Model</p>
+              <p>{t("browseFeatured")}</p>
               <br />
               <div className="flex gap-5">
                 <Button variant="featured"> <CarFront /> Suv</Button>

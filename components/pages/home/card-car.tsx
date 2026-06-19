@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Gauge, Fuel, Settings, ArrowUpRight, Bookmark } from "lucide-react";
-import type { cardProps } from "@/app/data.types/car-types";
+import type { cardProps } from "@/data.types/car-types";
 
 export default function CardCar({ car }: cardProps) {
   return (
