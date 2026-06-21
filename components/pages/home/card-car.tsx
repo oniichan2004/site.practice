@@ -5,8 +5,8 @@ import type { cardProps } from "@/data.types/car-types";
 
 export default function CardCar({ car }: cardProps) {
   return (
-    <div className="relative w-full max-w-[280px] h-95 rounded-2xl border bg-card text-card-foreground overflow-hidden ">
-      <div className="relative w-full h-[170px]">
+    <div className="relative w-full max-w-70 h-95 rounded-2xl border bg-card text-card-foreground overflow-hidden ">
+      <div className="relative w-full h-42.5">
         <Image src={car.img} alt={car.name} fill className="object-cover" />
 
         <div className="absolute top-4 left-4 right-4 flex justify-between items-center">

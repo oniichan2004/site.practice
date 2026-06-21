@@ -9,9 +9,9 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 export default function SearchBar() {
   return (
-    <div  className=" dark:bg-black mt-6 flex h-[68px] w-full max-w-[900px] items-center rounded-full bg-white px-4 text-black shadow-lg text-sm md:text-base">
+    <div  className=" dark:bg-black mt-6 flex h-17 w-full max-w-225 items-center rounded-full bg-white px-4 text-black shadow-lg text-sm md:text-base">
       <Select>
-        <SelectTrigger className="h-12 w-[180px] border-0 bg-transparent shadow-none focus:ring-0">
+        <SelectTrigger className="h-12 w-60 border-0 bg-transparent shadow-none focus:ring-0">
           <SelectValue placeholder="Any Makes" />
         </SelectTrigger>
         <SelectContent>
@@ -22,7 +22,7 @@ export default function SearchBar() {
       </Select>
       <div className="h-8 w-px bg-gray-200"  />
       <Select>
-        <SelectTrigger className="h-12 w-[180px] border-0 bg-transparent shadow-none focus:ring-0">
+        <SelectTrigger className="h-12 w-60 border-0 bg-transparent shadow-none focus:ring-0">
           <SelectValue placeholder="Any Models" />
         </SelectTrigger>
         <SelectContent>

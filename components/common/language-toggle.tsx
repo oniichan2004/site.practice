@@ -1,5 +1,7 @@
 "use client";
 
+import { useTransition } from "react";
+import { useLocale } from "next-intl";
 import {
   Select,
   SelectContent,
@@ -7,22 +9,29 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useLanguage } from "./language-context";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 const languages = [
   { value: "en", label: "🇬🇧 English" },
   { value: "ro", label: "🇷🇴 Română" },
+  { value: "ru", label: "🇷🇺 Русский" },
 ];
 
 export default function LanguageToggle() {
-  const { language, setLanguage } = useLanguage();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
 
   function handleChange(lang: string) {
-    setLanguage(lang as "en" | "ro");
+    // Swap the locale segment in the URL while keeping the current path
+    startTransition(() => {
+      router.replace(pathname, { locale: lang });
+    });
   }
 
   return (
-    <Select value={language} onValueChange={handleChange}>
+    <Select value={locale} onValueChange={handleChange} disabled={isPending}>
       <SelectTrigger className="h-9 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold px-3 gap-1 [&_svg]:text-white">
         <SelectValue />
       </SelectTrigger>

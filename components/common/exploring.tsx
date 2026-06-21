@@ -26,8 +26,8 @@ export default function Exploring() {
           </Link>
         </div>
         <div className="flex w-full items-center pl-40 pr-53">
-          <div className="h-[2px] w-14 bg-blue-500"></div>
-          <div className="h-[2px] flex-1 bg-border"></div>
+          <div className="h-0.5 w-14 bg-blue-500"></div>
+          <div className="h-0.5 flex-1 bg-border"></div>
         </div>
         <div className=" pl-40  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-7 justify-items-center">
           {cars.map((car) => (

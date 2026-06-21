@@ -7,14 +7,14 @@ import Link from "next/link";
 import SearchBar from "@/components/pages/home/search-bar";
 import ThemeToggle from "@/components/common/theme-toggle";
 import LanguageToggle from "@/components/common/language-toggle";
-import { useLanguage } from "@/components/common/language-context";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   return (
     <div className=" min-h-screen">
-      <div className="relative h-[600px] w-full">
+      <div className="relative h-150 w-full">
         <Image
           src="/hero.jpg"
           alt="Hero"
