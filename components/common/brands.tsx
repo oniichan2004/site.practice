@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 export default function Brands() {
+  const t = useTranslations("brands");
   return (
     <div className="-mt-43">
       <div className="bg-muted flex flex-row items-center  justify-between pl-40 pr-40  h-32 relative   rounded-t-4xl font-sans ">
-        <p className=" text-3xl pt-15  ">Explore Our Premium Brands</p>
+        <p className=" text-3xl pt-15  ">{t("title")}</p>
         <Link href="#" className="pt-15 flex items-center pr-13">
-          Show All Brands
+          {t("showAll")}
           <ArrowUpRight size={18} />
         </Link>
       </div>

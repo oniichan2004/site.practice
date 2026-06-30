@@ -1,14 +1,17 @@
 import Link from "next/link";
 import { ArrowUpRight, ChevronLeft,ChevronRight } from "lucide-react";
 import CardCarRight from "../pages/home/card-car-right";
+import { useTranslations } from "next-intl";
 export default function PopularMakes() {
+  const t = useTranslations("popularMakes");
+  const c = useTranslations("common");
   return (
     <div className="">
       <div className="bg-black text-white w-full h-160 ">
         <div className="flex flex-row items-center justify-between  pt-20 pl-40 pr-40">
-          <span className="text-3xl font-sans ">Popular Makes</span>
+          <span className="text-3xl font-sans ">{t("title")}</span>
           <Link href="#" className="flex flex-row gap-1">
-            View All <ArrowUpRight size="20" />
+            {c("viewAll")} <ArrowUpRight size="20" />
           </Link>
         </div>
 

@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { User, CarFront } from "lucide-react";
+import {  CarFront } from "lucide-react";
 import Link from "next/link";
 import SearchBar from "@/components/pages/home/search-bar";
 import ThemeToggle from "@/components/common/theme-toggle";
 import LanguageToggle from "@/components/common/language-toggle";
 import { useTranslations } from "next-intl";
-
+import Register from "../pages/home/register";
 export default function HeroSection() {
-  const t = useTranslations();
+  const t = useTranslations("nav");
+  const h = useTranslations("hero");
+  const b = useTranslations("bodyType");
 
   return (
     <div className=" min-h-screen">
@@ -56,36 +58,38 @@ export default function HeroSection() {
                   <span>{t("contact")}</span>
                 </Link>
                 <Link href="#" className="flex items-center gap-1">
-                  <User size={16} /> <span>{t("signIn")}</span>{" "}
+                  <Register/>
                 </Link>
 
                 <Button variant="custom">{t("submitListing")}</Button>
                 <LanguageToggle />
                 <ThemeToggle />
+
+
               </div>
             </header>
             <div className=" mt-15 flex flex-col items-center text-center text-white">
-              <p className=" text-sm md:text-lg ">{t("findCars")}</p>
+              <p className=" text-sm md:text-lg ">{h("findCars")}</p>
 
-              <p className="mt-4 text-xl font-bold md:text-4xl  lg:text-6xl">{t("perfectCar")}</p>
+              <p className="mt-4 text-xl font-bold md:text-4xl  lg:text-6xl">{h("perfectCar")}</p>
 
               <div className="mt-6 flex gap-6 text-sm">
                 <button className="border-b border-white pb-2 cursor-pointer">
-                  {t("all")}
+                  {h("all")}
                 </button>
-                <button className="pb-2 cursor-pointer">{t("newCar")}</button>
-                <button className="pb-2 cursor-pointer">{t("used")}</button>
+                <button className="pb-2 cursor-pointer">{h("newCar")}</button>
+                <button className="pb-2 cursor-pointer">{h("used")}</button>
               </div>
               <SearchBar />
               <br />
-              <p>{t("browseFeatured")}</p>
+              <p>{h("browseFeatured")}</p>
               <br />
               <div className="flex gap-5">
-                <Button variant="featured"> <CarFront /> Suv</Button>
-                <Button variant="featured"> <CarFront /> Sedan</Button>
-                <Button variant="featured"> <CarFront /> Hatchback</Button>
-                <Button variant="featured"> <CarFront /> Coupe</Button>
-                <Button variant="featured"> <CarFront /> Hybrid</Button>
+                <Button variant="featured"> <CarFront /> {b("suv")}</Button>
+                <Button variant="featured"> <CarFront /> {b("sedan")}</Button>
+                <Button variant="featured"> <CarFront /> {b("hatchback")}</Button>
+                <Button variant="featured"> <CarFront /> {b("coupe")}</Button>
+                <Button variant="featured"> <CarFront /> {b("hybrid")}</Button>
               </div>
             </div>
           </div>

@@ -1,16 +1,115 @@
 {
-  "home": "Home",
-  "listings": "Listings",
-  "blog": "Blog",
-  "pages": "Pages",
-  "about": "About",
-  "contact": "Contact",
-  "signIn": "Sign in",
-  "submitListing": "Submit Listing",
-  "findCars": "Find cars for sale and for rent near you",
-  "perfectCar": "Find Your Perfect Car",
-  "all": "All",
-  "newCar": "New",
-  "used": "Used",
-  "browseFeatured": "Or Browse Featured Model"
+  "nav": {
+    "home": "Home",
+    "listings": "Listings",
+    "blog": "Blog",
+    "pages": "Pages",
+    "about": "About",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "submitListing": "Submit Listing"
+  },
+  "hero": {
+    "findCars": "Find cars for sale and for rent near you",
+    "perfectCar": "Find Your Perfect Car",
+    "all": "All",
+    "newCar": "New",
+    "used": "Used",
+    "browseFeatured": "Or Browse Featured Model"
+  },
+  "bodyType": {
+    "suv": "SUV",
+    "sedan": "Sedan",
+    "hatchback": "Hatchback",
+    "coupe": "Coupe",
+    "hybrid": "Hybrid",
+    "electric": "Electric",
+    "truck": "Truck",
+    "convertible": "Convertible"
+  },
+  "search": {
+    "anyMakes": "Any Makes",
+    "specificMake": "Specific Make",
+    "anyModels": "Any Models",
+    "specificModel": "Specific Model",
+    "prices": "Prices:",
+    "allPrices": "All Prices",
+    "searchCars": "Search Cars"
+  },
+  "common": {
+    "viewAll": "View All",
+    "viewDetails": "View Details",
+    "getStarted": "Get Started",
+    "sale": "Sale"
+  },
+  "brands": {
+    "title": "Explore Our Premium Brands",
+    "showAll": "Show All Brands"
+  },
+  "exploring": {
+    "title": "Explore All Vehicles",
+    "inStock": "In Stock",
+    "newCars": "New Cars",
+    "usedCars": "Used Cars"
+  },
+  "something": {
+    "offerTitle1": "Get A Fair Price For Your Car",
+    "offerTitle2": "Car Sell To Us Today",
+    "offerDesc": "We are committed to providing our customers with exceptional service, competitive pricing, and a wide range of.",
+    "point1": "We are the UK’s largest provider, with more patrols in more places",
+    "point2": "You get 24/7 roadside assistance",
+    "point3": "We fix 4 out of 5 cars at the roadside",
+    "statCarsForSales": "CARS FOR SALES",
+    "statDealerReviews": "DEALER REVIEWS",
+    "statVisitors": "VISITORS PER DAY",
+    "statVerifiedDealers": "VERIFIED DEALERS",
+    "whyChooseUs": "Why Choose Us ?",
+    "feature1Title": "Special Financing Offers",
+    "feature1Desc": "Our stress-free finance department that can find financial solutions to save you money.",
+    "feature2Title": "Trusted Car Dealership",
+    "feature2Desc": "Our stress-free finance department that can find financial solutions to save you money.",
+    "feature3Title": "Transparent Pricing",
+    "feature3Desc": "Our stress-free finance department that can find financial solutions to save you money.",
+    "feature4Title": "Expert Car Service",
+    "feature4Desc": "Our stress-free finance department that can find financial solutions to save you money."
+  },
+  "popularMakes": {
+    "title": "Popular Makes"
+  },
+  "sellBuy": {
+    "lookingTitle1": "Are You Looking",
+    "lookingTitle2": "For a Car ?",
+    "lookingDesc": "We are committed to providing our customers with exceptional service.",
+    "sellTitle1": "Do You Want to",
+    "sellTitle2": "Sell a Car ?",
+    "sellDesc": "We are committed to providing our customers with exceptional service."
+  },
+  "footer": {
+    "joinTitle": "Join CarHut",
+    "joinDesc": "Receive pricing updates, shopping tips & more!",
+    "emailPlaceholder": "Your email adress",
+    "signUp": "Sign UP",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "services": "Services",
+    "faqs": "FAQs",
+    "terms": "Terms",
+    "contactUs": "Contact Us",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get in Touch",
+    "helpCenter": "Help center",
+    "liveChat": "Live chat",
+    "howItWorks": "How it works",
+    "ourBrands": "Our Brands",
+    "vehiclesType": "Vehicles Type",
+    "ourMobileApp": "Our Mobile App",
+    "downloadOn": "Download on the",
+    "appleStore": "Apple Store",
+    "getItOn": "Get it on",
+    "googlePlay": "Google Play",
+    "connectWithUs": "Connect With Us",
+    "rights": "2025 example.com. All rights reserved",
+    "legal": "Terms & Conditions Privacy Notice"
+  }
 }

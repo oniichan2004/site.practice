@@ -1,7 +1,9 @@
 import { Bookmark, Gauge, Fuel, Settings, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 export default function CardCarRight() {
+  const c = useTranslations("common");
   return (
     <div className="pt-2 pl-40 flex flex-row gap-10 overflow-hidden">
       <div className=" shrink-0 flex flex-row  w-130 h-60 rounded-xl bg-gray-700">
@@ -14,7 +16,7 @@ export default function CardCarRight() {
           ></Image>
           <div className="absolute  top-2 left-3 right-3 flex flex-row items-center justify-between  p-3">
             <div className="bg-blue-600 rounded-full w-15 text-white flex  items-center justify-center">
-              <span>Sale</span>
+              <span>{c("sale")}</span>
             </div>
             <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
               <Bookmark className="text-black" size={17} />
@@ -47,7 +49,7 @@ export default function CardCarRight() {
           <div className="flex flex-row items-center justify-between gap-13 pb-10">
             <span className="text-xl">$45 000</span>
             <Link href="#" className="flex flex-row items-center ">
-              <span>View Details</span> <ArrowUpRight size={15} />
+              <span>{c("viewDetails")}</span> <ArrowUpRight size={15} />
             </Link>
           </div>
         </div>
@@ -64,7 +66,7 @@ export default function CardCarRight() {
           ></Image>
           <div className="absolute  top-2 left-3 right-3 flex flex-row items-center justify-between  p-3">
             <div className="bg-blue-600 rounded-full w-15 text-white flex  items-center justify-center">
-              <span>Sale</span>
+              <span>{c("sale")}</span>
             </div>
             <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
               <Bookmark  className="text-black" size={17} />
@@ -100,7 +102,7 @@ export default function CardCarRight() {
           <div className=" flex flex-row items-center justify-between gap-10 pt-10 ">
             <span className="text-xl">$120 000</span>
             <Link href="#" className="flex flex-row items-center ">
-              <span>View Details</span> <ArrowUpRight size={15} />
+              <span>{c("viewDetails")}</span> <ArrowUpRight size={15} />
             </Link>
           </div>
         </div>
@@ -116,7 +118,7 @@ export default function CardCarRight() {
           ></Image>
           <div className="absolute  top-2 left-3 right-3 flex flex-row items-center justify-between  p-3">
             <div className="bg-blue-600 rounded-full w-15 text-white flex  items-center justify-center">
-              <span>Sale</span>
+              <span>{c("sale")}</span>
             </div>
             <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
               <Bookmark className="text-foreground" size={17} />
@@ -149,7 +151,7 @@ export default function CardCarRight() {
           <div className="flex flex-row items-center justify-between gap-13 pb-10">
             <span className="text-xl">$45 000</span>
             <Link href="#" className="flex flex-row items-center ">
-              <span>View Details</span> <ArrowUpRight size={15} />
+              <span>{c("viewDetails")}</span> <ArrowUpRight size={15} />
             </Link>
           </div>
         </div>

@@ -2,27 +2,30 @@ import Link from "next/link";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import CardCar from "../pages/home/card-car";
 import { cars } from "@/data/cars";
+import { useTranslations } from "next-intl";
 export default function Exploring() {
+  const t = useTranslations("exploring");
+  const c = useTranslations("common");
   return (
     <div>
       <div className=" h-190 flex flex-col gap-6 pt-20">
         <div className="flex flex-row items-center justify-between  pl-40 pr-40">
-          <span className="text-3xl">Explore All Vehicles</span>
+          <span className="text-3xl">{t("title")}</span>
           <Link href="#" className="flex flex-row items-center pr-13 ">
-            View All
+            {c("viewAll")}
             <ArrowUpRight size={18} />
           </Link>
         </div>
 
         <div className=" flex flex-row gap-4 text-sm pl-40">
           <Link href="#">
-            <span>In Stock</span>
+            <span>{t("inStock")}</span>
           </Link>{" "}
           <Link href="#">
-            <span>New Cars</span>
+            <span>{t("newCars")}</span>
           </Link>{" "}
           <Link href="#">
-            <span>Used Cars</span>
+            <span>{t("usedCars")}</span>
           </Link>
         </div>
         <div className="flex w-full items-center pl-40 pr-53">

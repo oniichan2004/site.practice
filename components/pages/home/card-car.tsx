@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Gauge, Fuel, Settings, ArrowUpRight, Bookmark } from "lucide-react";
 import type { cardProps } from "@/data.types/car-types";
+import { useTranslations } from "next-intl";
 
 export default function CardCar({ car }: cardProps) {
+  const c = useTranslations("common");
   return (
     <div className="relative w-full max-w-70 h-95 rounded-2xl border bg-card text-card-foreground overflow-hidden ">
       <div className="relative w-full h-42.5">
@@ -61,7 +63,7 @@ export default function CardCar({ car }: cardProps) {
         <span className="font-bold text-2xl">{car.price}</span>
 
         <Link href="#" className="flex items-center text-blue-500 text-sm">
-          View Details <ArrowUpRight size={16} />
+          {c("viewDetails")} <ArrowUpRight size={16} />
         </Link>
       </div>
     </div>

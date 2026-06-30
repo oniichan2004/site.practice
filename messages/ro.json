@@ -1,16 +1,115 @@
 {
-  "home": "Acasă",
-  "listings": "Anunțuri",
-  "blog": "Blog",
-  "pages": "Pagini",
-  "about": "Despre",
-  "contact": "Contact",
-  "signIn": "Conectare",
-  "submitListing": "Adaugă Anunț",
-  "findCars": "Găsește mașini de vânzare și de închiriat lângă tine",
-  "perfectCar": "Găsește-ți Mașina Perfectă",
-  "all": "Toate",
-  "newCar": "Noi",
-  "used": "Second-hand",
-  "browseFeatured": "Sau Explorează Modele Populare"
+  "nav": {
+    "home": "Acasă",
+    "listings": "Anunțuri",
+    "blog": "Blog",
+    "pages": "Pagini",
+    "about": "Despre",
+    "contact": "Contact",
+    "signIn": "Conectare",
+    "submitListing": "Adaugă Anunț"
+  },
+  "hero": {
+    "findCars": "Găsește mașini de vânzare și de închiriat lângă tine",
+    "perfectCar": "Găsește-ți Mașina Perfectă",
+    "all": "Toate",
+    "newCar": "Noi",
+    "used": "Second-hand",
+    "browseFeatured": "Sau Explorează Modele Populare"
+  },
+  "bodyType": {
+    "suv": "SUV",
+    "sedan": "Sedan",
+    "hatchback": "Hatchback",
+    "coupe": "Coupé",
+    "hybrid": "Hibrid",
+    "electric": "Electric",
+    "truck": "Camion",
+    "convertible": "Decapotabilă"
+  },
+  "search": {
+    "anyMakes": "Orice marcă",
+    "specificMake": "Marcă anume",
+    "anyModels": "Orice model",
+    "specificModel": "Model anume",
+    "prices": "Prețuri:",
+    "allPrices": "Toate prețurile",
+    "searchCars": "Caută mașini"
+  },
+  "common": {
+    "viewAll": "Vezi toate",
+    "viewDetails": "Vezi detalii",
+    "getStarted": "Începe",
+    "sale": "Reducere"
+  },
+  "brands": {
+    "title": "Explorează Brandurile Noastre Premium",
+    "showAll": "Arată toate brandurile"
+  },
+  "exploring": {
+    "title": "Explorează Toate Vehiculele",
+    "inStock": "În stoc",
+    "newCars": "Mașini noi",
+    "usedCars": "Mașini second-hand"
+  },
+  "something": {
+    "offerTitle1": "Obține un preț corect pentru mașina ta",
+    "offerTitle2": "Vinde-ne mașina ta astăzi",
+    "offerDesc": "Ne angajăm să oferim clienților noștri servicii excepționale, prețuri competitive și o gamă largă.",
+    "point1": "Suntem cel mai mare furnizor din Marea Britanie, cu mai multe patrule în mai multe locuri",
+    "point2": "Beneficiezi de asistență rutieră 24/7",
+    "point3": "Reparăm 4 din 5 mașini direct pe șosea",
+    "statCarsForSales": "MAȘINI DE VÂNZARE",
+    "statDealerReviews": "RECENZII DEALERI",
+    "statVisitors": "VIZITATORI PE ZI",
+    "statVerifiedDealers": "DEALERI VERIFICAȚI",
+    "whyChooseUs": "De ce să ne alegi?",
+    "feature1Title": "Oferte speciale de finanțare",
+    "feature1Desc": "Departamentul nostru de finanțe fără stres găsește soluții financiare care îți economisesc bani.",
+    "feature2Title": "Dealer auto de încredere",
+    "feature2Desc": "Departamentul nostru de finanțe fără stres găsește soluții financiare care îți economisesc bani.",
+    "feature3Title": "Prețuri transparente",
+    "feature3Desc": "Departamentul nostru de finanțe fără stres găsește soluții financiare care îți economisesc bani.",
+    "feature4Title": "Service auto expert",
+    "feature4Desc": "Departamentul nostru de finanțe fără stres găsește soluții financiare care îți economisesc bani."
+  },
+  "popularMakes": {
+    "title": "Mărci Populare"
+  },
+  "sellBuy": {
+    "lookingTitle1": "Cauți",
+    "lookingTitle2": "o mașină?",
+    "lookingDesc": "Ne angajăm să oferim clienților noștri servicii excepționale.",
+    "sellTitle1": "Vrei să",
+    "sellTitle2": "vinzi o mașină?",
+    "sellDesc": "Ne angajăm să oferim clienților noștri servicii excepționale."
+  },
+  "footer": {
+    "joinTitle": "Alătură-te CarHut",
+    "joinDesc": "Primește actualizări de preț, sfaturi de cumpărare și multe altele!",
+    "emailPlaceholder": "Adresa ta de email",
+    "signUp": "Abonează-te",
+    "company": "Companie",
+    "aboutUs": "Despre noi",
+    "blog": "Blog",
+    "services": "Servicii",
+    "faqs": "Întrebări frecvente",
+    "terms": "Termeni",
+    "contactUs": "Contactează-ne",
+    "quickLinks": "Linkuri rapide",
+    "getInTouch": "Ia legătura",
+    "helpCenter": "Centru de ajutor",
+    "liveChat": "Chat live",
+    "howItWorks": "Cum funcționează",
+    "ourBrands": "Brandurile noastre",
+    "vehiclesType": "Tip vehicul",
+    "ourMobileApp": "Aplicația noastră",
+    "downloadOn": "Descarcă din",
+    "appleStore": "Apple Store",
+    "getItOn": "Disponibil pe",
+    "googlePlay": "Google Play",
+    "connectWithUs": "Conectează-te cu noi",
+    "rights": "2025 example.com. Toate drepturile rezervate",
+    "legal": "Termeni și condiții · Notă de confidențialitate"
+  }
 }
