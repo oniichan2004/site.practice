@@ -8,11 +8,19 @@ import SearchBar from "@/components/pages/home/search-bar";
 import ThemeToggle from "@/components/common/theme-toggle";
 import LanguageToggle from "@/components/common/language-toggle";
 import { useTranslations } from "next-intl";
-import Register from "../pages/home/register";
+import { useState } from "react";
+import { User } from "lucide-react";
+import RegisterDialog from "../pages/home/register";
+import Login from "../pages/home/login";
+import ProfileMenu from "../pages/home/profile-menu";
+import { useAuth } from "@/components/providers/auth-provider";
 export default function HeroSection() {
   const t = useTranslations("nav");
   const h = useTranslations("hero");
   const b = useTranslations("bodyType");
+
+  const [registerOpen, setRegisterOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   return (
     <div className=" min-h-screen">
@@ -57,11 +65,20 @@ export default function HeroSection() {
                 <Link href="#" className="flex items-center">
                   <span>{t("contact")}</span>
                 </Link>
-                <Link href="#" className="flex items-center gap-1">
-                  <Register/>
-                </Link>
-
-                <Button variant="custom">{t("submitListing")}</Button>
+                {isAuthenticated ? (
+                  <ProfileMenu />
+                ) : (
+                  <>
+                    <Button onClick={() => setRegisterOpen(true)}>
+                      <User size={16} /> Register
+                    </Button>
+                    <RegisterDialog
+                      open={registerOpen}
+                      setOpen={setRegisterOpen}
+                    />
+                    <Login />
+                  </>
+                )}
                 <LanguageToggle />
                 <ThemeToggle />
 

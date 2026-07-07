@@ -16,10 +16,16 @@ const REFRESH_TOKEN_KEY = "refreshToken"
 // localStorage on the server throws "localStorage is not defined".
 const isBrowser = (): boolean => typeof window !== "undefined"
 
-const getAccessToken = (): string | null =>
+export const getAccessToken = (): string | null =>
   isBrowser() ? localStorage.getItem(ACCESS_TOKEN_KEY) : null
 
-const clearTokens = (): void => {
+export const setTokens = (accessToken: string, refreshToken: string): void => {
+  if (!isBrowser()) return
+  localStorage.setItem(ACCESS_TOKEN_KEY, accessToken)
+  localStorage.setItem(REFRESH_TOKEN_KEY, refreshToken)
+}
+
+export const clearTokens = (): void => {
   if (!isBrowser()) return
   localStorage.removeItem(ACCESS_TOKEN_KEY)
   localStorage.removeItem(REFRESH_TOKEN_KEY)
