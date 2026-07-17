@@ -6,6 +6,7 @@
     "pages": "Pagini",
     "about": "Despre",
     "contact": "Contact",
+    "products": "Produse",
     "signIn": "Conectare",
     "submitListing": "Adaugă Anunț"
   },
@@ -41,6 +42,12 @@
     "viewDetails": "Vezi detalii",
     "getStarted": "Începe",
     "sale": "Reducere"
+  },
+  "authGuard": {
+    "checking": "Se verifică accesul...",
+    "title": "Autentificare necesară",
+    "description": "Trebuie să fii autentificat pentru a vedea această pagină. Te redirecționăm către pagina principală...",
+    "goHome": "Mergi la pagina principală"
   },
   "brands": {
     "title": "Explorează Brandurile Noastre Premium",

@@ -6,6 +6,7 @@
     "pages": "Pages",
     "about": "About",
     "contact": "Contact",
+    "products": "Products",
     "signIn": "Sign in",
     "submitListing": "Submit Listing"
   },
@@ -41,6 +42,12 @@
     "viewDetails": "View Details",
     "getStarted": "Get Started",
     "sale": "Sale"
+  },
+  "authGuard": {
+    "checking": "Checking access...",
+    "title": "Login required",
+    "description": "You need to be logged in to view this page. Redirecting you to the home page...",
+    "goHome": "Go to home page"
   },
   "brands": {
     "title": "Explore Our Premium Brands",

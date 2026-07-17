@@ -25,3 +25,42 @@ export interface UserProfile {
   email: string;
   phoneNumber?: string;
 }
+export interface CreateProductDto {
+  name: string;
+  price: number;
+  category: string;
+}
+
+export type ProductResponse = {
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: string | null;
+};
+
+export type ProductsMeta = {
+  page: string;
+  take: string;
+  itemCount: number;
+  pageCount: number;
+  hasPreviousPage: boolean;
+  hasNextPage: boolean;
+};
+export type GetProductsResponse = {
+  data: ProductResponse[];
+  meta: ProductsMeta;
+};
+
+export interface GetProductsParams {
+  page?: number;
+  take?: number;
+  order?: "ASC" | "DESC";
+}
+export type UpdateProductDto = {
+  name?: string;
+  price?: number;
+  category?: string;
+};

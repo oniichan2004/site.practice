@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {  CarFront } from "lucide-react";
+import {  CarFront, Car } from "lucide-react";
 import Link from "next/link";
+import { Link as LocaleLink } from "@/i18n/navigation";
 import SearchBar from "@/components/pages/home/search-bar";
 import ThemeToggle from "@/components/common/theme-toggle";
 import LanguageToggle from "@/components/common/language-toggle";
@@ -65,6 +66,11 @@ export default function HeroSection() {
                 <Link href="#" className="flex items-center">
                   <span>{t("contact")}</span>
                 </Link>
+                <Button asChild variant="featured">
+                  <LocaleLink href="/products" className="flex items-center gap-2">
+                    <Car size={16} /> {t("products")}
+                  </LocaleLink>
+                </Button>
                 {isAuthenticated ? (
                   <ProfileMenu />
                 ) : (

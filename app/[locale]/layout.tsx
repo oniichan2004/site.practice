@@ -5,9 +5,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import ThemeProvider from "@/components/common/theme-provider";
-import Footer from "@/components/common/footer-section";
 import { routing } from "@/i18n/routing";
-import HeroSection from "@/components/common/hero-section";
 import { AuthProvider } from "@/components/providers/auth-provider";
 import { Toaster } from "sonner"
 const geistSans = Geist({
@@ -53,11 +51,7 @@ export default async function RootLayout({
         <ThemeProvider>
           <NextIntlClientProvider>
             <Toaster position ="top-right"/>
-            <AuthProvider>
-              <HeroSection/>
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </AuthProvider>
+            <AuthProvider>{children}</AuthProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
