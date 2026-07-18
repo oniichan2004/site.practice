@@ -43,7 +43,9 @@ export default function ProductsClient() {
 
   const [editOpen, setEditOpen] = useState(false);
 
-  const [deleteTarget, setDeleteTarget] = useState<ProductResponse | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<ProductResponse | null>(
+    null,
+  );
 
   function handleEdit(product: ProductResponse) {
     setSelectedProduct(product);
