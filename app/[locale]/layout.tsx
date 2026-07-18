@@ -7,6 +7,7 @@ import "../globals.css";
 import ThemeProvider from "@/components/common/theme-provider";
 import { routing } from "@/i18n/routing";
 import { AuthProvider } from "@/components/providers/auth-provider";
+import { QueryProvider } from "@/components/providers/query-provider";
 import { Toaster } from "sonner"
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,7 +52,9 @@ export default async function RootLayout({
         <ThemeProvider>
           <NextIntlClientProvider>
             <Toaster position ="top-right"/>
-            <AuthProvider>{children}</AuthProvider>
+            <QueryProvider>
+              <AuthProvider>{children}</AuthProvider>
+            </QueryProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

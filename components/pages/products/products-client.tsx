@@ -1,8 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, Pencil, Plus, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 
+import { productKeys } from "@/api/query-keys";
 import { getProducts, deleteProduct } from "@/api/requests";
 import ProductDialog from "@/components/pages/products/product-dialog";
 import { Button } from "@/components/ui/button";
@@ -20,9 +23,17 @@ import { Link } from "@/i18n/navigation";
 import type { ProductResponse } from "@/api/types";
 
 export default function ProductsClient() {
-  const [products, setProducts] = useState<ProductResponse[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const queryClient = useQueryClient();
+
+  const {
+    data: products = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: productKeys.list(),
+    queryFn: () => getProducts(),
+    select: (result) => result.data,
+  });
 
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<ProductResponse | null>(null);
@@ -33,42 +44,28 @@ export default function ProductsClient() {
   const [editOpen, setEditOpen] = useState(false);
 
   const [deleteTarget, setDeleteTarget] = useState<ProductResponse | null>(null);
-  const [deleting, setDeleting] = useState(false);
 
   function handleEdit(product: ProductResponse) {
     setSelectedProduct(product);
     setEditOpen(true);
   }
 
-  async function confirmDelete() {
-    if (!deleteTarget) return;
-    setDeleting(true);
-    try {
-      await deleteProduct(deleteTarget.id);
-      setProducts((currentProducts) =>
-        currentProducts.filter((product) => product.id !== deleteTarget.id),
-      );
+  const deleteMutation = useMutation({
+    mutationFn: deleteProduct,
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: productKeys.all });
       setDeleteTarget(null);
-    } catch (error) {
-      console.error("Produsul nu a putut fi șters:", error);
-    } finally {
-      setDeleting(false);
-    }
+      toast.success("Product deleted successfully");
+    },
+    onError: () => {
+      toast.error("Failed to delete product. Please try again.");
+    },
+  });
+
+  function confirmDelete() {
+    if (!deleteTarget) return;
+    deleteMutation.mutate(deleteTarget.id);
   }
-
-  const loadProducts = useCallback(() => {
-    getProducts()
-      .then((result) => {
-        setError(false);
-        setProducts(result.data);
-      })
-      .catch(() => setError(true))
-      .finally(() => setLoading(false));
-  }, []);
-
-  useEffect(() => {
-    loadProducts();
-  }, [loadProducts]);
 
   const openCreate = () => {
     setEditing(null);
@@ -91,9 +88,9 @@ export default function ProductsClient() {
         </Button>
       </div>
 
-      {loading ? (
+      {isLoading ? (
         <p className="text-muted-foreground">Loading products...</p>
-      ) : error ? (
+      ) : isError ? (
         <p className="text-destructive">Failed to load products.</p>
       ) : products.length === 0 ? (
         <p className="text-muted-foreground">
@@ -139,7 +136,6 @@ export default function ProductsClient() {
         open={dialogOpen}
         onOpenChange={setDialogOpen}
         product={editing}
-        onSaved={loadProducts}
       />
 
       {selectedProduct && (
@@ -147,7 +143,6 @@ export default function ProductsClient() {
           product={selectedProduct}
           open={editOpen}
           onOpenChange={setEditOpen}
-          onSaved={loadProducts}
         />
       )}
 
@@ -181,9 +176,9 @@ export default function ProductsClient() {
             <Button
               variant="destructive"
               onClick={confirmDelete}
-              disabled={deleting}
+              disabled={deleteMutation.isPending}
             >
-              {deleting ? "Deleting..." : "Delete"}
+              {deleteMutation.isPending ? "Deleting..." : "Delete"}
             </Button>
           </DialogFooter>
         </DialogContent>

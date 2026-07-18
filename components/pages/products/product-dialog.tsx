@@ -2,8 +2,10 @@
 
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 
+import { productKeys } from "@/api/query-keys";
 import { createProduct, updateProduct } from "@/api/requests";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,16 +32,15 @@ interface ProductDialogProps {
   onOpenChange: (open: boolean) => void;
   /** When provided, the dialog edits this product; otherwise it creates a new one. */
   product?: ProductResponse | null;
-  onSaved?: () => void;
 }
 
 export default function ProductDialog({
   open,
   onOpenChange,
   product,
-  onSaved,
 }: ProductDialogProps) {
   const isEdit = !!product;
+  const queryClient = useQueryClient();
 
   const {
     register,
@@ -65,25 +66,42 @@ export default function ProductDialog({
     );
   }, [open, product, reset]);
 
-  const onSubmit = handleSubmit(async (data) => {
-    try {
-      if (product) {
-        await updateProduct(product.id, data);
-        toast.success("Product updated successfully");
-      } else {
-        await createProduct(data);
-        toast.success("Product created successfully");
-      }
+  const createMutation = useMutation({
+    mutationFn: createProduct,
+    onSuccess: () => {
+      toast.success("Product created successfully");
+      void queryClient.invalidateQueries({ queryKey: productKeys.all });
       onOpenChange(false);
-      onSaved?.();
-    } catch {
-      toast.error(
-        isEdit
-          ? "Failed to update product. Please try again."
-          : "Failed to create product. Please try again.",
-      );
-    }
+    },
+    onError: () => {
+      toast.error("Failed to create product. Please try again.");
+    },
   });
+
+  const updateMutation = useMutation({
+    mutationFn: (vars: { id: string; data: ProductFormValues }) =>
+      updateProduct(vars.id, vars.data),
+    onSuccess: () => {
+      toast.success("Product updated successfully");
+      void queryClient.invalidateQueries({ queryKey: productKeys.all });
+      onOpenChange(false);
+    },
+    onError: () => {
+      toast.error("Failed to update product. Please try again.");
+    },
+  });
+
+  const onSubmit = handleSubmit((data) => {
+    if (product) {
+      updateMutation.mutate({ id: product.id, data });
+      return;
+    }
+
+    createMutation.mutate(data);
+  });
+
+  const isSaving =
+    isSubmitting || createMutation.isPending || updateMutation.isPending;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -105,7 +123,7 @@ export default function ProductDialog({
             {errors.name ? (
               <p className="text-sm text-destructive">{errors.name.message}</p>
             ) : null}
-          </div>
+          </div> 
 
           <div className="flex flex-col gap-1.5">
             <label htmlFor="product-price" className="text-sm font-medium">
@@ -148,8 +166,8 @@ export default function ProductDialog({
                 Cancel
               </Button>
             </DialogClose>
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Saving..." : "Save"}
+            <Button type="submit" disabled={isSaving}>
+              {isSaving ? "Saving..." : "Save"}
             </Button>
           </DialogFooter>
         </form>
