@@ -8,7 +8,8 @@
       "Bash(awk '/^## Memory/{f=1} f' .claude/rules/core/validation.md)",
       "Bash(sed -n '/## Memory Integration/,/## Conflict Resolution/p' .claude/rules/core/orchestrator.md)",
       "mcp__context7__query-docs",
-      "Bash(grep -E \"\\\\.tsx?$\")"
+      "Bash(grep -E \"\\\\.tsx?$\")",
+      "Bash(curl *)"
     ],
     "deny": [],
     "additionalDirectories": [
