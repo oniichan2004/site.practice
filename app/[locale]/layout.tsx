@@ -8,7 +8,7 @@ import ThemeProvider from "@/components/common/theme-provider";
 import { routing } from "@/i18n/routing";
 import { AuthProvider } from "@/components/providers/auth-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
-import { Toaster } from "sonner"
+import { Toaster } from "sonner";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -51,7 +51,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <NextIntlClientProvider>
-            <Toaster position ="top-right"/>
+            <Toaster position="top-right" />
             <QueryProvider>
               <AuthProvider>{children}</AuthProvider>
             </QueryProvider>
